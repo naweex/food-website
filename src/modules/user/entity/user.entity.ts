@@ -19,8 +19,8 @@ export class UserEntity {
     score: number;
     @Column({nullable: true})
     agentId: number;
-    @CreateDateColumn()
+    @CreateDateColumn({type : 'time with time zone'})
     created_at : Date;
-    @UpdateDateColumn()
+    @UpdateDateColumn({type : 'time with time zone'})
     updated_at : Date;
 }
