@@ -18,7 +18,7 @@ export class UserAddressEntity {
     postal_code : string;
     @Column()
     userId : number;
-    @CreateDateColumn({type : 'time with time zone'})
+    @CreateDateColumn()
     created_at: Date;
     @ManyToOne(() => UserEntity, (user) => user.addressList, { //many addresses can belong to one USER.
         onDelete: "CASCADE",
