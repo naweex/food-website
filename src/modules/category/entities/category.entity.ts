@@ -2,7 +2,7 @@ import { EntityNames } from "src/common/enum/entity-name.enum";
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity(EntityNames.Category)
-export class CategoryEntity {
+export class CategoryEntity  {
     @PrimaryGeneratedColumn('increment')
     id : number;
     @Column()
@@ -23,4 +23,4 @@ export class CategoryEntity {
       parent: CategoryEntity;
       @OneToMany(() => CategoryEntity, (category) => category.parent)
       children: CategoryEntity[];
-}
+} 
